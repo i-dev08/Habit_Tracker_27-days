@@ -1,0 +1,429 @@
+.app {
+  width: 100%;
+  min-height: 100vh;
+}
+
+
+
+
+.header {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+  padding: 50px 0 30px;
+
+  text-align: center;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 3rem;
+}
+
+.header p {
+  margin-top: 10px;
+}
+
+
+
+main {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+}
+
+
+
+
+
+.garden-preview-section {
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.garden-preview-section h2 {
+  margin-bottom: 15px;
+}
+
+.garden-window {
+  position: relative;
+
+  width: 100%;
+  min-height: 280px;
+
+  padding: 35px;
+
+  border: 2px solid #333;
+  border-radius: 24px;
+
+  cursor: pointer;
+
+  background: #eee8d9;
+
+  overflow: hidden;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.garden-window:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+
+
+
+
+
+
+
+.garden-preview {
+  width: 100%;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  justify-content: center;
+  align-items: flex-end;
+
+  gap: 40px;
+}
+
+.preview-patch {
+  min-width: 180px;
+
+  text-align: center;
+}
+
+.preview-patch h3 {
+  margin-bottom: 15px;
+}
+
+.preview-plants {
+  display: flex;
+
+  justify-content: center;
+  align-items: flex-end;
+
+  flex-wrap: wrap;
+
+  gap: 10px;
+}
+
+.preview-plant {
+  font-size: 2.5rem;
+}
+
+.empty-garden {
+  min-height: 200px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+.empty-garden span {
+  font-size: 3.5rem;
+}
+
+
+
+
+
+
+
+.garden-window-label {
+  position: absolute;
+
+  bottom: 18px;
+  right: 22px;
+
+  display: flex;
+  gap: 8px;
+
+  opacity: 0.65;
+
+  font-size: 0.9rem;
+}
+
+
+
+
+
+
+
+.habits-section {
+  width: 100%;
+
+  padding-bottom: 80px;
+}
+
+.habits-section h2 {
+  margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+.add-habit {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+
+  gap: 10px;
+
+  margin-bottom: 30px;
+}
+
+.add-habit input {
+  flex: 1;
+
+  max-width: 600px;
+
+  padding: 14px 18px;
+
+  border: 1px solid #aaa;
+  border-radius: 12px;
+}
+
+.add-habit button {
+  padding: 14px 20px;
+
+  border: none;
+  border-radius: 12px;
+
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+.habit-list {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 15px;
+}
+
+.habit-card {
+  width: 100%;
+
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 20px 25px;
+
+  border-radius: 16px;
+
+  background: rgba(255, 255, 255, 0.55);
+
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.habit-card h3 {
+  margin: 0 0 8px;
+}
+
+.habit-card p {
+  margin: 4px 0;
+
+  opacity: 0.65;
+}
+
+.habit-card button {
+  padding: 10px 18px;
+
+  border: none;
+  border-radius: 10px;
+
+  cursor: pointer;
+}
+
+.habit-card button:disabled {
+  cursor: default;
+  opacity: 0.6;
+}
+
+
+
+
+
+
+
+.garden-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 1000;
+
+  padding: 20px;
+
+  background: rgba(0, 0, 0, 0.55);
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.full-garden {
+  width: 100%;
+  height: 100%;
+
+  max-width: 1200px;
+
+  background: #88684D;
+
+  border-radius: 24px;
+
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+
+
+
+
+.garden-header {
+  flex-shrink: 0;
+
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 25px 30px;
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.garden-header h2 {
+  margin: 0;
+}
+
+.garden-header p {
+  margin: 5px 0 0;
+
+  opacity: 0.6;
+}
+
+.close-garden {
+  width: 42px;
+  height: 42px;
+
+  border: none;
+  border-radius: 50%;
+
+  font-size: 1.2rem;
+
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+.garden-patches {
+  flex: 1;
+
+  overflow-y: auto;
+
+  padding: 30px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 35px;
+}
+
+.garden-patch {
+  width: 100%;
+
+  padding: 25px;
+
+  border-radius: 20px;
+
+  background: #5A4030;
+
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.patch-header {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 25px;
+}
+
+.patch-header h3 {
+  margin: 0;
+}
+
+.patch-header p {
+  margin: 5px 0 0;
+
+  opacity: 0.6;
+}
+
+.patch-plants {
+  display: flex;
+  flex-wrap: wrap;
+
+  align-items: flex-end;
+
+  justify-content: flex-start;
+
+  gap: 25px;
+}
+
+.full-plant {
+  min-width: 70px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 3px;
+}
+
+.full-plant-emoji {
+  font-size: 3rem;
+
+  transition: transform 0.2s ease;
+}
+
+.full-plant:hover .full-plant-emoji {
+  transform: scale(1.15);
+}
+
+.full-plant small {
+  opacity: 0.55;
+}
